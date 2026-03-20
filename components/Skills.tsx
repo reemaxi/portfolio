@@ -24,7 +24,7 @@ const SKILL_BARS = [
     percent: 82,
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
     name: "NestJS",
     percent: 78,
   },
@@ -59,7 +59,7 @@ const SKILL_PILLS = {
       label: "JavaScript",
     },
     {
-      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       label: "Tailwind CSS",
     },
     {
@@ -77,7 +77,7 @@ const SKILL_PILLS = {
       label: "Node.js",
     },
     {
-      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
       label: "NestJS",
     },
     { icon: "fa-plug", label: "REST APIs" },
