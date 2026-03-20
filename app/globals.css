@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8faff;
+  color: #1e293b;
+}
+
+/* Navbar */
+.navbar-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 40%, #e0f2fe 70%, #f8faff 100%);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #3b82f6, #0ea5e9, #38bdf8) border-box;
+  border: 2px solid transparent;
+}
+
+/* Section bg */
+.section-alt {
+  background: linear-gradient(180deg, #f8faff 0%, #eff6ff 50%, #f8faff 100%);
+}
+
+/* Card hover */
+.card-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+}
+
+/* Skill pill */
+.skill-pill {
+  background: linear-gradient(135deg, #eff6ff, #e0f2fe);
+  border: 1px solid #bfdbfe;
+  transition: all 0.3s ease;
+}
+.skill-pill:hover {
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #3b82f6, #0ea5e9);
+}
+
+/* Blob animation */
+.blob {
+  border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+  0%, 100% { border-radius: 62% 38% 46% 54% / 60% 44% 56% 40%; }
+  50% { border-radius: 38% 62% 54% 46% / 44% 60% 40% 56%; }
+}
+
+/* Nav link active */
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Project tag */
+.project-tag {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  font-weight: 500;
+}
+
+/* Floating shapes */
+.shape {
+  position: absolute;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+/* Scroll top button */
+#scrollTop {
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#scrollTop.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
+  height: 6px;
+  border-radius: 999px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress-bar.animated { width: var(--progress); }
+
+/* Hero avatar placeholder */
+.avatar-ring {
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9, #38bdf8);
+  padding: 4px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem !important; }
+}
+
+/* Typewriter cursor */
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Mobile menu */
+#mobile-menu { transition: all 0.3s ease; }
